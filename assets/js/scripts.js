@@ -131,6 +131,14 @@ $(function () {
         $(this).addClass("active fw-bolder");
     });
 
+    $(".nav-link").on("click", function () {
+        if (this.id == 'buscarNav') {
+            window.scrollTo(0, 510);
+        }
+        if (this == 'inicioNav') {
+            window.scrollTo(0, 10);
+        }
+    });
 })
 
 
