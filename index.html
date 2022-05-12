@@ -64,30 +64,30 @@
 </main>
 
 <section id="respuesta" class="px-2 pb-5 px-sm-5 bg-secondary d-none">
-    <div class="row rounded-3 p-1">
+    <div class="row rounded-3 p-1 mb-5">
 
         <div id="superHeroSection" class="col-12 col-xl-6 text-sm-center">
             <div class="card bg-transparent border-0 text-light">
-                <div class="row g-0">
-                    <div class="col-md-4 my-auto">
+                <div class="row">
+                    <div class="col-12 col-md-4 my-auto">
                         <img id="imagenHero" src="" class="img-fluid rounded-start">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-12 col-md-8">
                         <div class="card-body">
                             <h5 id="nombre" class="card-title"></h5>
-                            <p id="conexiones" class="card-text small"><i><b>Conexiones: </b></i></p>
+                            <p class="card-text small"><i><b>Conexiones: </b></i><span id="conexiones"></span></p>
                             <hr>
-                            <p id="publicado" class="card-text small"><i><b>Publicado por: </b></i></p>
+                            <p class="card-text small"><i><b>Publicado por: </b></i> <span id="publicado"></span></p>
                             <hr>
-                            <p id="ocupación" class="card-text small"><i><b>Ocupación: </b></i></p>
+                            <p class="card-text small"><i><b>Ocupación: </b></i><span id="ocupación"></span></p>
                             <hr>
-                            <p id="primera" class="card-text small"><i><b>Primera Aparición: </b></i></p>
+                            <p class="card-text small"><i><b>Primera Aparición: </b></i><span id="primera"></span></p>
                             <hr>
-                            <p id="altura" class="card-text small"><i><b>Altura: </b></i></p>
+                            <p class="card-text small"><i><b>Altura: </b></i><span id="altura"></span></p>
                             <hr>
-                            <p id="peso" class="card-text small"><i><b>Peso: </b></i></p>
+                            <p class="card-text small"><i><b>Peso: </b></i><span id="peso"></span> </p>
                             <hr>
-                            <p id="aliados" class="card-text small"><i><b>Aliados: </b></i></p>
+                            <p class="card-text small"><i><b>Aliados: </b></i><span id="aliados"></span></p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
         </div>
 
         <div class="card col-12 col-xl-6 bg-secondary border-0 my-auto">
-            <div id="chartContainer" class="bg-secondary" style="height: 300px; width: 100%;"></div>
+            <div id="chartContainer" class="bg-secondary" style="height: 500px; width: 100%;"></div>
         </div>
 
     </div>
@@ -104,7 +104,7 @@
 
 <!--<div id="chartContainer" style="height: 300px; width: 100%;"></div>-->
 
-<footer id="footer" class="text-light text-center bg-dark bg-gradient py-3 pb-2">
+<footer id="footer" class="text-light text-center bg-dark bg-gradient py-3 pb-2 fixed-bottom">
     <div class="row px-0 mx-0">
         <div>
             <h6 class="fw-light">&copy; 2022</h6>

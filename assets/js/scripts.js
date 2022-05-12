@@ -27,6 +27,8 @@ $(function () {
             $('#msgInput').text('')
             $('#respuesta').removeClass('d-none')
 
+            window.scrollTo(0, 510);
+
             $.ajax({
                 type: 'GET',
                 url: `https://www.superheroapi.com/api.php/4905856019427443/${valueInput}`,
@@ -56,7 +58,7 @@ $(function () {
                     $('#primera').text(`${primeraAparicion}`)
                     $('#altura').text(`${altura}`)
                     $('#peso').text(`${peso}`)
-                    $('#aliados').text(`${aliados}`)
+                    $('#aliados').text(`${aliadosList}`)
 
                     $('#imagenHero').attr('src', `${imagen}`)
 
@@ -95,7 +97,7 @@ $(function () {
                         data: [{
                             type: "pie",
                             startAngle: 25,
-                            toolTipContent: "<b>{label}</b>: {y}",
+                            toolTipContent: "{label}: {y}",
                             showInLegend: "true",
                             legendText: "{label}",
                             indexLabelFontSize: 13,
