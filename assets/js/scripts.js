@@ -1,4 +1,7 @@
 $(function () {
+
+    var imagenReemplazo = ''
+
     $('form').submit(function (event) {
         event.preventDefault()
 
@@ -46,70 +49,41 @@ $(function () {
                         aliadosList.push(i)
                     }
 
-                    $('#superHeroSection').html(`
-                <div class="card bg-transparent border-0">
-                    <div class="row g-0">
-                        <div class="col-md-4 my-auto">
-                            <img src="${imagen}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">${nombre}</h5>
-                                <p class="card-text small"><i><b>Conexiones: </b></i>${conexiones}</p>
-                                <hr>
-                                <p class="card-text small"><i><b>Publicado por: </b></i>${publicado}</p>
-                                <hr>
-                                <p class="card-text small"><i><b>Ocupación: </b></i>${ocupacion}</p>
-                                <hr>
-                                <p class="card-text small"><i><b>Primera Aparición: </b></i>${primeraAparicion}</p>
-                                <hr>
-                                <p class="card-text small"><i><b>Altura: </b></i>${altura}</p>
-                                <hr>
-                                <p class="card-text small"><i><b>Peso: </b></i>${peso}</p>
-                                <hr>
-                                <p class="card-text small"><i><b>Aliados: </b></i>${aliadosList}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `)
+                    $('#nombre').text(`${nombre}`)
+                    $('#conexiones').text(`${conexiones}`)
+                    $('#publicado').text(`${publicado}`)
+                    $('#ocupacion').text(`${ocupacion}`)
+                    $('#primera').text(`${primeraAparicion}`)
+                    $('#altura').text(`${altura}`)
+                    $('#peso').text(`${peso}`)
+                    $('#aliados').text(`${aliados}`)
+
+                    $('#imagenHero').attr('src', `${imagen}`)
 
                     let combat = parseInt(data.powerstats.combat)
-                    console.log(combat)
-                    if(!combat){
+                    if (!combat) {
                         combat = 0
                     }
-                    console.log(combat)
                     let durability = parseInt(data.powerstats.durability)
-                    console.log(durability)
-                    if(!durability){
+                    if (!durability) {
                         durability = 0
                     }
-                    console.log(durability)
                     let intelligence = parseInt(data.powerstats.intelligence)
-                    console.log(intelligence)
-                    if(!intelligence){
+                    if (!intelligence) {
                         intelligence = 0
                     }
-                    console.log(intelligence)
                     let power = parseInt(data.powerstats.power)
-                    console.log(power)
-                    if(!power){
+                    if (!power) {
                         power = 0
                     }
-                    console.log(power)
                     let speed = parseInt(data.powerstats.speed)
-                    console.log(speed)
-                    if(!speed){
+                    if (!speed) {
                         speed = 0
                     }
-                    console.log(speed)
                     let strength = parseInt(data.powerstats.strength)
-                    console.log(strength)
-                    if(!strength){
+                    if (!strength) {
                         strength = 0
                     }
-                    console.log(strength)
 
                     var chart = new CanvasJS.Chart("chartContainer", {
                         theme: "dark2", // "light1", "light2", "dark1", "dark2"
@@ -143,6 +117,12 @@ $(function () {
 
     })
 
+    // imagen reemplazo si es que trae errores
+    $('#imagenHero').on('error', function () {
+        imagenReemplazo = 'assets/img/favicon/favicon.png'
+        $('#imagenHero').attr('src', imagenReemplazo)
+    })
+
     // navbar ACTIVE
     $(".nav-link").on("click", function () {
         $(".navbar-nav, .nav-link").find(".active").removeClass("active fw-bolder");
@@ -150,6 +130,11 @@ $(function () {
     });
 
 })
+
+
+
+
+
 
 
 
