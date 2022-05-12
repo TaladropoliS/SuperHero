@@ -1,8 +1,29 @@
+*{
+    /*border: 1px solid red;*/
+}
+
+body {
+    background-color: #6C757D;
+}
+
+#logo-nav {
+    max-height: 50px;
+}
+
+#superHeroImg {
+    max-height: 300px;
+}
 
 #superHeroDiv{
     background-image: url("../img/fondo01.jpg");
     background-size: cover;
 }
+
+#listaId {
+    color: white !important;
+    text-decoration: none;
+}
+
 
 
 
